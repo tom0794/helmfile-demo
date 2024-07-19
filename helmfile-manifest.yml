@@ -1,0 +1,12 @@
+environments:
+  default:
+    values:
+      - replicaCount: 1000
+      - global: 
+          foo: bar
+          imageRegistry: imgreg
+
+helmfiles:
+- path: subfiles/common.yml
+  values:
+  - {{ .StateValues | toYaml | nindent 4 | trim }}
