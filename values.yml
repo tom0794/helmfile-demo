@@ -1,0 +1,4 @@
+replicaCount: 1000
+global: 
+  foo: bar
+  imageRegistry: imgreg
