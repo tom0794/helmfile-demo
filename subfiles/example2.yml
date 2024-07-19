@@ -1,6 +1,5 @@
-repositories:
-  - name: bitnami
-    url: https://charts.bitnami.com/bitnami
+bases:
+  - ../defaults.yml
 
 releases:
   - name: nginx

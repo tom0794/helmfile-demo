@@ -11,7 +11,3 @@ helmfiles:
 - path: subfiles/example1.yml
   values:
   - {{ .StateValues | toYaml | nindent 4 | trim }}
-
-# Example 2: Instead of setting values, use --args in helmfile command
-# ex: helmfile template --file helmfile-manifest.yml --args "--values ../values.yml"
-- path: subfiles/example2.yml

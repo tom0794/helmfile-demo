@@ -1,0 +1,5 @@
+helmfiles:
+# Example 3: Fetch file from remote and apply local values files
+# ex: helmfile template --file example3.yml --args "--values ../values.yml"
+# using absolute path to file: helmfile template --file example3.yml --args "-f `pwd`/values.yml"
+- path: git::https://github.com/tom0794/helmfile-demo.git@subfiles/example2.yml?ref=master

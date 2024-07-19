@@ -1,0 +1,4 @@
+helmfiles:
+# Example 2: Instead of setting values, use --args in helmfile command
+# ex: helmfile template --file example2.yml --args "--values ../values.yml"
+- path: subfiles/example2.yml
