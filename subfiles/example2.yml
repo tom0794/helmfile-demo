@@ -1,7 +1,17 @@
 bases:
   - ../defaults.yml
 
+environments:
+  default:
+    values:
+      - foo: 
+          bar: "default"
+---
 releases:
   - name: nginx
     chart: bitnami/nginx
     version: 12.0.4
+    {{- if eq .StateValues.foo.bar "foobar" }}
+    needs:
+    - other-chart
+    {{- end }}
