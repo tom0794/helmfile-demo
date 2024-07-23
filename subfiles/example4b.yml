@@ -1,0 +1,30 @@
+repositories:
+  - name: bitnami
+    url: https://charts.bitnami.com/bitnami
+
+environments:
+  default:
+    values:
+      - foo: 
+          bar: "default"
+---
+releases:
+  - name: kafka
+    chart: bitnami/kafka
+    version: 29.3.11
+    namespace: {{ .Namespace }}
+    needs:
+      - postgresql-ha
+
+  - name: apache
+    chart: bitnami/apache
+    version: 11.2.11
+    namespace: {{ .Namespace }}
+    needs:
+      - postgresql-ha
+
+  - name: postgresql-ha
+    chart: bitnami/postgresql-ha
+    version: 14.2.12
+    namespace: {{ .Namespace }}
+    wait: true

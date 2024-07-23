@@ -4,4 +4,4 @@ helmfiles:
 - path: subfiles/example2.yml
   values:
   - foo:
-      bar: foobar
+      bar: foobar2

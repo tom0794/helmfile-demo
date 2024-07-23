@@ -1,4 +1,8 @@
-replicaCount: 1000
-global: 
-  foo: bar
-  imageRegistry: imgreg
+replicaCount: 1
+# global: 
+#   foo: bar
+#   imageRegistry: imgreg
+networkPolicy:
+  enabled: false
+service:
+  type: NodePort

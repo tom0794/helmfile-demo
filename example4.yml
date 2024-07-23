@@ -1,0 +1,5 @@
+helmfiles:
+# Example 4: Install multile files
+# ex: helmfile apply --file example4.yml --concurrency 1 --namespace tc --args "--values ../values.yml --set postgresql.password=abc1 --set postgresql.repmgrPassword=abc1 --set pgpool.adminPassword=abc1" --log-level debug
+- path: subfiles/example4a.yml
+- path: subfiles/example4b.yml
